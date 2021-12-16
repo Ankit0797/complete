@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <!---<title> Responsive Registration Form | CodingLab </title>--->
+  <link rel="stylesheet" href="ank.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<script>
+  
+  
+  // for sow
+  
+  $(document).ready(function () {
+    var max_fields = 1000; //maximum input boxes allowed
+    var wrapper = $(".input"); //Fields wrapper
+    var add_button = $(".japa"); //Add button ID
+
+    var x = 1; //initlal text box count
+
+
+    $(add_button).click(function (e) { //on add input button click
+      e.preventDefault();
+      if (x < max_fields) { //max input box allowed
+
+        //text box increment
+        $(wrapper).append('<div><textarea>data analyst</textarea> <a href="#" class="remove_field">REMOVE</a></div>'); //add input box
+        x++;
+
+      }
+    });
+
+    $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
+
+      e.preventDefault();
+      $(this).parent('div').remove();
+      x--;
+    })
+  });
+
+
+// for complianc document
+
+$(document).ready(function () {
+    var max_fields = 1000; //maximum input boxes allowed
+    var wrapper = $(".input-1"); //Fields wrapper
+    var add_button = $(".japa-1"); //Add button ID
+
+    var x = 1; //initlal text box count
+
+
+    $(add_button).click(function (e) { //on add input button click
+      e.preventDefault();
+      if (x < max_fields) { //max input box allowed
+
+        //text box increment
+        $(wrapper).append('<div><textarea>data analyst</textarea> <a href="#" class="remove_field">REMOVE</a></div>'); //add input box
+        x++;
+
+      }
+    });
+
+    $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
+
+      e.preventDefault();
+      $(this).parent('div').remove();
+      x--;
+    })
+  });
+
+
+
+  //for po document
+
+  $(document).ready(function () {
+    var max_fields = 1000; //maximum input boxes allowed
+    var wrapper = $(".input-box-2"); //Fields wrapper
+    var add_button = $(".japa-2"); //Add button ID
+
+    var x = 1; //initlal text box count
+
+
+    $(add_button).click(function (e) { //on add input button click
+      e.preventDefault();
+      if (x < max_fields) { //max input box allowed
+
+        //text box increment
+        $(wrapper).append('<div><textarea>data analyst</textarea> <a href="#" class="remove_field">REMOVE</a></div>'); //add input box
+        x++;
+
+      }
+    });
+
+    $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
+
+      e.preventDefault();
+      $(this).parent('div').remove();
+      x--;
+    })
+  });
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<body>
+  <div class="container">
+    <div class="title">Project Details Page</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Project Start date:</span>
+            <input name="ID" type="date" class="form-control" id="email">
+          </div>
+          <div class="input-box">
+            <span class="details">Project End date:</span>
+            <input name="estart" type="date" class="form-control" id="email">
+          </div>
+          <div class="input-box">
+            <span class="details">PO Number:</span>
+            <input name="ponum" type="text" placeholder="Enter your email" >
+          </div>
+          <div class="input-box">
+            <span class="details">PO date:</span>
+            <input name="podate" type="date" class="form-control" id="email">
+          </div>
+          <div class="input">
+            <span class="details">SOW:</span>
+            <textarea name="sow">data analyst</textarea>
+            <button class="japa">+</button>
+          </div>
+          <div class="input-box-2">
+            <span class="details">PO Terms and Conditions:</span>
+            <textarea name="poterms">data analyst</textarea>
+            <button class="japa-2">+</button>
+          </div>
+          <div class="input-1">
+            <span class="details">Compliance Document:</span>
+            <textarea name="compliance">data analyst</textarea>
+            <button class="japa-1">+</button>
+          </div>
+          <div class="input-box">
+            <span class="details">Payment Cycle:</span>
+            <select name="paycycle" class="form-control-md" required>
+              <option selected>Choose...</option>
+              <option>Monthly</option>
+              <option>Quarterly</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Rate type:</span>
+            <select name="rate" class="form-control-md" required>
+              <option selected>Choose...</option>
+              <option>Resource Wise</option>
+              <option>Man Hours</option>
+              <option>Man Days</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Emp ID:</span>
+            <input name="ID" type="text" class="form-control" id="email">
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
